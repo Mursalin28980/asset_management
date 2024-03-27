@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Assets</title>
+    <link rel="stylesheet" href="{% static 'assigned_assets.css' %}">
+</head>
+<body>
+    <div class="header"></div>
+    <div class="logo-box"></div>
+    <div class="company-name">Mursalin Asset Management</div>
+    <div class="welcome-message">Welcome {{ user.username}}!</div>
+    <!-- <img class="user-avatar" src="https://via.placeholder.com/49x52" /> -->
+    <div class="asset-section-title">Your Assets</div>
+
+    <div class="asset-column-titles">
+        <div class="asset-title">Asset Name</div>
+        <div class="asset-title">Usage Count</div>
+        <div class="asset-title">Barcode ID</div>
+        <div class="asset-title">Checkout Date</div>
+    </div>
+
+    {% for asset in assets %}
+    <div class="asset-row">
+        <div class="asset-info">{{ asset.name }}</div>
+        <div class="asset-info">{{ asset.description }}</div>
+        <div class="asset-info">{{ asset.barcode}}</div>
+        <div class="asset-info">{{ asset.checkout_date|date:"Y-m-d" }}</div>
+    </div>
+    {% empty %}
+    <div class="no-assets">No assets assigned.</div>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* assigned_assets.css */
+body {
+    font-family: 'Inria Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.header {
+    width: 100%;
+    height: 152px;
+    background-color: #D9D9D9;
+}
+
+.logo-box {
+    width: 140px;
+    height: 82px;
+    background-color: white;
+    border-radius: 18px;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+}
+
+.company-name {
+    font-size: 48px;
+    color: black;
+    margin-left: 65px;
+    padding-top: 36px;
+}
+
+.welcome-message {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    right: 50px;
+    top: 64px;
+}
+
+.asset-section-title {
+    color: black;
+    font-size: 37px;
+    margin-left: 65px;
+    padding-top: 150px;
+}
+
+.asset-column-titles, .asset-row {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+.asset-title, .asset-info {
+    font-size: 29px;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    padding: 15px;
+    flex-grow: 1;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.asset-row {
+    margin-top: 10px;
+}
+
+.no-assets {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-avatar {
+    position: absolute;
+    right: 140px;
+    top: 47px;
+}
+
+/* Clear the right margin on the last element in the flex container */
+.asset-title:last-child, .asset-info:last-child {
+    margin-right: 0;
+}
+
+/* Add any additional styles as needed */

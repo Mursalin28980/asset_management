@@ -3,11 +3,11 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Asset
+from django.views.decorators.csrf import csrf_exempt
+
 
 def landing_page(request):
     return render(request, 'landing_page.html')
-
-
 
 def user_login(request):
     if request.method == 'POST':
@@ -15,6 +15,8 @@ def user_login(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
+            print("Logged in")
+            print(user)
             login(request, user)
             return redirect('assigned_assets')
         else:
@@ -22,9 +24,10 @@ def user_login(request):
     return render(request, 'login.html')
 
 @login_required
+@csrf_exempt 
 def assigned_assets(request):
     user = request.user
-    assets = Asset.objects.filter(user=user)
+    assets = Asset.objects.filter(assigned_to=user)
     return render(request, 'assigned_assets.html', {'assets': assets})
 
 def choose_page(request):
