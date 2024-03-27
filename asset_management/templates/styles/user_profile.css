@@ -1,0 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+.container {
+    width: 1512px;
+    height: 982px;
+    position: relative;
+}
+
+.header {
+    width: 1512px;
+    height: 152px;
+    background: #D9D9D9;
+}
+
+.welcome-box {
+    width: 140px;
+    height: 82px;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    background: white;
+    border-radius: 18px;
+}
+
+.company-name, .welcome-text, .profile-title, .username, .user-id, .nickname, .error-message, .button-text {
+    word-wrap: break-word;
+    color: black;
+}
+
+.company-name {
+    position: absolute;
+    width: 618px;
+    top: 36px;
+    left: 65px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.welcome-text {
+    position: absolute;
+    width: 372px;
+    top: 64px;
+    right: 233px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.profile-pic, .settings-icon {
+    position: absolute;
+}
+
+.profile-pic {
+    width: 78px;
+    height: 69px;
+    right: 157px;
+    top: 47px;
+}
+
+.settings-icon {
+    width: 49px;
+    height: 52px;
+    right: 62px;
+    top: 51px;
+}
+
+.profile-title {
+    width: 497px;
+    position: absolute;
+    text-align: center;
+    top: 215px;
+    left: 449px;
+    font-size: 39px;
+    font-weight: 400;
+}
+
+.profile-section {
+    width: 440px;
+    height: 558px;
+    position: absolute;
+    top: 295px;
+    left: 489px;
+}
+
+.profile-info, .login-button, .update-button {
+    position: absolute;
+    width: 436px;
+    height: 74px;
+    background: #EDEDED;
+    border-radius: 21px;
+}
+
+.profile-info > .info-box, .login-button > .button-box, .update-button > .button-box {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-info > div, .login-button > div, .update-button > div {
+    position: absolute;
+    left: 41px;
+}
