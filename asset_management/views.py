@@ -4,6 +4,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Asset
 
+def landing_page(request):
+    return render(request, 'landing_page.html')
+
+
+
 def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']
